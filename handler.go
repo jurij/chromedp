@@ -21,7 +21,7 @@ import (
 	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/cdproto/runtime"
 
-	"github.com/chromedp/chromedp/client"
+	"github.com/jurij/chromedp/client"
 )
 
 // TargetHandler manages a Chrome DevTools Protocol target.
@@ -544,6 +544,8 @@ func (h *TargetHandler) pageEvent(ctxt context.Context, ev interface{}) {
 	case *page.EventFrameResized:
 		return
 	case *page.EventLifecycleEvent:
+		return
+	case *page.EventNavigatedWithinDocument:
 		return
 
 	default:

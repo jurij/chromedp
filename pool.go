@@ -7,7 +7,7 @@ import (
 	"net"
 	"sync"
 
-	"github.com/chromedp/chromedp/runner"
+	"github.com/jurij/chromedp/runner"
 )
 
 // Pool manages a pool of running Chrome processes.
